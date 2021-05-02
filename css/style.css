@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    position: relative;
+    padding-top: 1px;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    min-height: 60vh;
+    background: linear-gradient(to right top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8));
+    border-radius: 30px;
+  
+}
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+    background: linear-gradient(to right top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8));
+    border-radius: 30px ;
+    text-align: center;
+}
+.user{
+    text-align: center;
+    padding: 30px 20px;
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.user h2{
+    font-size: 18px;
+    line-height: 26px;
+    color: rgb(0, 0, 0) ;
+    word-spacing: 14px;
+    /* text-decoration: overline ;
+    text-decoration-color:  rgb(91, 130, 166); */
+}
+.user h3{
+    font-size: 16px;
+    color: rgb(91, 130, 166);
+}
+.icons {
+    margin-top: 5px;
+}
+.icons span{
+    display: block;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.icons p{
+    display: inline-block;
+    color: rgb(91, 130, 166) ;
+
+}
+.icons a{
+    color: aqua;
+
+}
+.icons a i{
+    font-size: 30px;
+    margin-top: 10px;
+    vertical-align: sub;
+    padding-right: 10px;
+}
+.ads a{
+    display: block;
+}
+.ads img{
+    width: 200px;
+    height: 200px;
+    margin-top: 40px;
+  
+}
+/* ------------Board Card */
+
+.board{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    min-height: inherit;
+    background-color: inherit;
+    padding: 20px 0px 20px 0px;
+}
+.board .title{
+    padding-left: 40px;
+}
+.board .title h1{
+    color: rgb(91, 130, 166) ;
+}
+.board .title input{
+    border: none;
+    outline: none;
+}
+.board-card{
+    display: flex;
+    flex-direction: column;
+}
+.board-card .card{
+    display: flex;
+    background-color: #fff;
+    box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    padding: 20px 0px;
+    padding-left: 20px;
+    position: relative;
+}
+.board-card .card span{
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    color: rgb(106,220,217);
+    font-weight: 500;
+    font-size: 17px;
+   
+}
+.board-card .card .content{
+    margin-left: 20px;
+}
+.board-card .content h4, .board-card .content p{
+    color: rgb(91, 130, 166) ;
+}
+.card .progress-bar{
+    margin-top: 10px;
+    border-radius: 20px;
+    min-height: 4vh;
+    width: 70%;
+    background-color: rgb(236, 235, 236);
+    position: relative;
+}
+.card .progress-bar::before{
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgb(106,220,217);
+}
+/* Grad Circles */
+.circle{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to right top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9));
+    border-radius: 50%;
+}
+.grad1{
+    top: 1px;
+    right: 4%;
+}
+.grad2{
+    bottom: 1px;
+    left: 4%;
+}
+
+/* ------------media Queries */
+
+/* ------------media Query for smaller screens */
+@media (min-width: 100px ){
+    section{
+        flex-direction: column;
+        width: 100%;
+        margin: 0px 10px;
+    }
+    .dashboard{
+        width: 100%;
+    }
+    .user img{
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px ;
+    }
+    .board{
+        width: 100%;
+
+    }
+    .board-card{
+        padding: 20px 20px;
+    }
+    .board-card .card{
+        flex-direction: column;
+        margin: 20px 0px 10px 0px;
+    }
+    .board .title h1{
+        font-size: 30px;
+    }
+    .board .title input{
+        padding: 5px 20px 5px 3px;
+    }
+
+    .card .progress-bar{
+        width: 70%;
+    }
+    .ads img{
+        transform: rotateX(300deg) translateX(40px) ;
+    }
+    /* Grad Circles */
+    .circle{
+        display: none;
+    }
+
+    
+}
+
+/* ------------media Query for larger screens */
+@media (min-width: 768px ){
+    section{
+        flex-direction: row;
+        width: 80%;
+    }
+    .dashboard{
+        width: 30%;
+    }
+    .user img{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 6px ;
+    }
+    .board{
+        width: 70%;
+    }
+    .board-card {
+        padding: 20px 40px;
+    }
+    .board-card .card{
+        flex-direction: row;
+        margin: 20px 20px 10px 0px;
+    }
+    .board .title input{
+        padding: 5px 50px 5px 3px;
+    }
+    .card .progress-bar{
+        width: 120%;
+    }
+    .board .title h1{
+        font-size: 35px;
+    }
+    .board-card .card .content{
+        margin-left: 6px;
+    }
+    .ads img{
+        transform: rotateX(300deg) translateX(24px) ;
+        width: 150px;
+    }
+
+}
+
+
+
+/* ------------media Query for larger screens */
+@media (min-width: 1024px ){
+
+    .circle{
+        display: block;
+    }
+}
